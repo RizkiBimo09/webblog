@@ -1,20 +1,84 @@
-/* MOBILE VERSION */
+/* MOBILE POTRAIT VERSION */
 @media (max-width: 576px) {
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    z-index: 2;
+  }
+  /* END Navbar */
+
+  /* Jumbotron */
+  .jumbotron {
+    position: relative;
+  }
+
+   /* END Jumbotron */
+
+  /*Working Space*/
+
   .workingspace {
     margin-bottom: 50px;
   }
 
+ /* END Working Space*/
+ 
+ /* .custom-container {
+    width: 100%;
+    padding: 0;
+  } */
+
+  /* Commentar */
+  .review-carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 120%;
+  }
+
+
+  .review-card {
+    flex: 0 0 80%;
+    margin-right: 6%;
+  }
+
+  .review-card-no-mirror {
+    flex: 0 0 80%;
+    margin-right: 6%;
+  }
+
+  .card-img-top {
+    height: 30%;
+  }
+
+  .review-card .review-content p {
+    margin-bottom: 2%;
+    height: auto;
+  }
+ /* END Commentar */
+
+  /* Custom */
+
+  .tombol {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: #5468e7;
+  }
+
   .urutan-kolom1 {
-    order: 1; /* Mengubah urutan kolom menjadi 2 */
+    order: 1; 
     margin-bottom: 20px;
   }
 
   .urutan-kolom2 {
-    order: 2; /* Mengubah urutan kolom menjadi 2 */
+    order: 2; 
   }
+
+  /* END Custom */
 }
 
-/* ALL */
+/* SEMUA UKURAN */
 
 /* .body{
     margin: 0;
@@ -22,13 +86,24 @@
 
 /* Navbar */
 .navbar {
-  position: relative;
-  z-index: 1;
+  /* position: relative;
+  z-index: 1; */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; 
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand {
+  color: white;
   font-size: 52px;
   font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+  color: white; 
 }
 /* END Navbar */
 
@@ -39,8 +114,8 @@
   height: 900px;
   /* width: auto; */
   /* text-align: center; */
-  position: relative;
-  margin-top: -105px;
+
+  /* margin-top: -90px;/ */
   margin-left: -900px;
 }
 
@@ -73,12 +148,43 @@
   font-weight: 600;
 }
 
+.jumbotron .arrow-forward {
+  position: absolute;
+  top: 14px;
+  right: 4%;
+  cursor: pointer;
+}
+
+
+.jumbotron input[type="text"] {
+  padding: 5px 50px 5px 10px;
+  width: 100%;
+  border: 2px solid #D1ECFD;
+  border-radius: 5px;
+  background-color: #F5F5F5;
+  color: black;
+
+}
+
+
+.jumbotron input[type="text"]::placeholder {
+  color: #7676B2;
+
+}
+
+
+.jumbotron input[type="text"]:focus {
+  border-color: rgb(84, 104, 231);
+  box-shadow: 0 0 0 3px rgba(84, 104, 231, 0.2);
+}
+
 /* END Jumbotron */
 
 /* Workingspace */
-.workingspace {
-  /* text-align: center; */
-}
+
+/* .workingspace {
+  text-align: center;
+} */
 
 .workingspace h3 {
   font-size: 50px;
@@ -107,15 +213,11 @@
 
 .review-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Add shadow effect */
   transition: box-shadow 0.3s ease-in-out;
-  /* Optional: Add rounded corners for a better look */
   flex: 0 0 27%;
-  /* Adjust the width as needed */
   margin-right: 6%;
 }
 
-/* Increase shadow on hover */
 .review-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -130,9 +232,7 @@
 
 .review-card .review-content {
   max-width: 100%;
-  /* Set maximum width for the review content */
   padding: 2%;
-  /* Add some padding to the content */
 }
 
 .review-card .avatar-img {
@@ -146,46 +246,35 @@
 
 .review-card .reviewer-name p {
   display: block;
-
-  /* Sesuaikan style lainnya jika diperlukan */
   margin-bottom: 10px;
 }
 
 .review-card .review-content p {
   margin-bottom: 1%;
-  /* Remove margin-bottom as it's not needed anymore */
   height: 2%;
-  /* Enable vertical scrolling if the content exceeds the fixed height */
+  
 }
 
 .card-img-top {
   height: 45%;
-  /* Sesuaikan tinggi dengan ukuran card lain */
   object-fit: cover;
 }
 
-/* Custom styles for the Next and Previous buttons */
 .custom-btn {
   background-color: #ffffff;
-  /* Change the background color here */
   color: #ffffff;
-  /* Change the text color (if needed) */
   border: none;
-  /* Adjust the padding as needed */
   border-radius: 5%;
-  /* Add rounded corners */
   cursor: pointer;
 }
 
-/* Custom styles for the Next and Previous button images */
 .custom-btn img {
   width: 60%;
-  /* Adjust the image width as needed */
   height: 60%;
-  /* Adjust the image height as needed */
 }
+/* END Review Card */
 
-/* Media query for mobile landscape */
+/* MOBILE LANDSCAPE VERSION */
 @media only screen and (max-width: 767px) {
   .review-carousel {
     height: auto;
@@ -210,68 +299,16 @@
   }
 }
 
-/* Media query for mobile portrait */
-@media only screen and (max-width: 576px) {
-  .custom-container {
-    width: 100%;
-    padding: 0;
-  }
+/* END MOBILE LANDSCAPE VERSION */
 
-  /* ... Existing CSS Rules ... */
-
-  .review-carousel {
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex;
-    transition: transform 0.3s ease;
-    height: 120%;
-  }
-
-  .review-card {
-    flex: 0 0 80%;
-    margin-right: 6%;
-  }
-
-  .review-card-no-mirror {
-    flex: 0 0 80%;
-    margin-right: 6%;
-  }
-
-  .card-img-top {
-    height: 30%;
-  }
-
-  .review-card .review-content p {
-    margin-bottom: 2%;
-    height: auto;
-  }
-}
-/* END Review Card */
 
 /* Footer */
 
 /* END Footer */
 
-/* Utility */
+/* Custom */
 .font-family {
   font-family: Lexend Deca;
-}
-
-.tombol {
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  background-color: #5468e780;
-  width: 184px;
-  height: 47px;
-  font-size: 18px;
-  font-weight: 400;
-  padding: 10px, 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .tombol2 {
@@ -329,6 +366,17 @@
   margin-left: 8px;
 }
 
+.arrow-icon {
+  /* Styling for arrow icon */
+  position: absolute;
+  top: 50%;
+  right: -40%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 .text-model {
   color: #232340;
   font-weight: 700;
@@ -336,11 +384,15 @@
   /* height: 50vh; */
 }
 
-/* END Utility */
+/* END Custom */
 
 /* DEKSTOP VERSION */
 @media (min-width: 992px) {
   /* Navbar */
+  .navbar {
+    position: relative; /* Membuat navbar tetap di atas */
+  }
+
   .navbar-brand,
   .nav-link {
     color: white !important;
@@ -423,6 +475,23 @@
 
   .lead span {
     display: block;
+  }
+
+  .tombol {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: #5468e780;
+    width: 184px;
+    height: 47px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px, 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .lebar-mockup {
